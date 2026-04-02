@@ -12,8 +12,8 @@ export default function SeminarFooter() {
               <div className="flex flex-col gap-1 sm:gap-2">
                 <h3 className="mb-2 uppercase text-neutral-400 text-xs sm:text-sm">Форматы обучения</h3>
                 <p className="text-white text-sm sm:text-base">Интенсив — <span className="text-amber-400 font-semibold">3 месяца</span> (3 этапа по месяцу)</p>
-                <p className="text-white text-sm sm:text-base">Углублённый — <span className="text-amber-400 font-semibold">7 месяцев</span> (3 этапа по 10 недель)</p>
-                <p className="text-neutral-400 text-xs sm:text-sm mt-2">15 групповых занятий</p>
+                <p className="text-white text-sm sm:text-base">Углублённый — <span className="text-amber-400 font-semibold">6 месяцев</span> (3 этапа по 2 месяца)</p>
+                <p className="text-neutral-400 text-xs sm:text-sm mt-2">12 групповых занятий</p>
                 <p className="text-neutral-400 text-xs sm:text-sm">6 индивидуальных консультаций</p>
                 <p className="text-neutral-400 text-xs sm:text-sm">75 учебных часов</p>
               </div>
