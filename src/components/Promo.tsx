@@ -25,14 +25,17 @@ export default function Promo() {
         </motion.div>
       </div>
 
-      <h3 className="absolute top-12 right-6 text-white uppercase z-10 text-sm md:text-base lg:text-lg">
-        Анатомия возможностей
+      <div className="absolute inset-0 bg-black/30 z-[1]" />
+      <h3 className="absolute top-12 right-6 text-white uppercase z-10 text-sm md:text-base lg:text-lg tracking-widest">
+        Park Hotel «Parad» · Томск
       </h3>
 
-      <p className="absolute bottom-12 right-6 text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-5xl z-10">
-        Каждая секция — рамка для твоей истории. Формируй её, миксуй и позволь контенту
-        литься в неожиданные паттерны, заставляя листать дальше.
-      </p>
+      <div className="absolute bottom-12 right-6 z-10 text-right">
+        <p className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-3xl mb-6 leading-tight">
+          На берегу реки Томи — место, где начинается внутренняя трансформация
+        </p>
+        <p className="text-white/80 text-sm uppercase tracking-widest">Начало 24 апреля в 16:00 · Завершение 26 апреля в 16:00</p>
+      </div>
     </div>
   );
 }

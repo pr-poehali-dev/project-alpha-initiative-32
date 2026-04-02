@@ -1,22 +1,42 @@
 export default function Featured() {
+  const program = [
+    "Соединение с единомышленниками",
+    "Диагностика и трансформация энергий",
+    "Понимание законов энергий и их влияния на жизнь",
+    "Преодоление внутренних конфликтов",
+    "Развитие тонких тел и формирование эфирного плана",
+    "Раскрытие женской силы",
+    "Глубинное расслабление — практика Шавасана",
+    "Сакральные танцы для наполнения энергией",
+    "Создание семейной Мандалы",
+    "Преобразование энергий от разрушения к созиданию",
+  ];
+
   return (
-    <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center min-h-screen px-6 py-12 lg:py-0 bg-white">
+    <div id="program" className="flex flex-col lg:flex-row lg:justify-between lg:items-center min-h-screen px-6 py-16 lg:py-0 bg-white">
       <div className="flex-1 h-[400px] lg:h-[800px] mb-8 lg:mb-0 lg:order-2">
         <img
           src="/images/woman-horse.jpg"
-          alt="Woman on horse in countryside"
+          alt="Природа и гармония"
           className="w-full h-full object-cover"
         />
       </div>
       <div className="flex-1 text-left lg:h-[800px] flex flex-col justify-center lg:mr-12 lg:order-1">
-        <h3 className="uppercase mb-4 text-sm tracking-wide text-neutral-600">Функции, которые не стоят на месте</h3>
-        <p className="text-2xl lg:text-4xl mb-8 text-neutral-900 leading-tight">
-          Не просто список возможностей — живые, дышащие акценты. Каждая функция адаптируется к движению, контексту и настроению,
-          оживляя продукт с первого взгляда.
+        <h3 className="uppercase mb-4 text-sm tracking-wide text-neutral-500">Программа ритрита</h3>
+        <p className="text-2xl lg:text-4xl mb-8 text-neutral-900 leading-tight font-bold">
+          3 дня глубинной<br />трансформации
         </p>
-        <button className="bg-black text-white border border-black px-4 py-2 text-sm transition-all duration-300 hover:bg-white hover:text-black cursor-pointer w-fit uppercase tracking-wide">
-          Подробнее
-        </button>
+        <ul className="space-y-3 mb-10">
+          {program.map((item, i) => (
+            <li key={i} className="flex items-start gap-3 text-neutral-700 text-sm md:text-base">
+              <span className="text-neutral-400 mt-0.5 shrink-0">{String(i + 1).padStart(2, "0")}</span>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+        <p className="text-xs uppercase tracking-wide text-neutral-400 mb-2">Ведущий</p>
+        <p className="text-neutral-900 font-semibold text-base md:text-lg">Вадим Леонидович Ветчанин</p>
+        <p className="text-neutral-500 text-sm mt-1">Психолог · Мастер йоги · 30 лет практики · Основатель кафедры духовной навигации МИЙ</p>
       </div>
     </div>
   );
