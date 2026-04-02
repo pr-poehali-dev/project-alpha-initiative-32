@@ -36,7 +36,7 @@ export default function Featured() {
         </ul>
         <p className="text-xs uppercase tracking-wide text-neutral-400 mb-2">Ведущий</p>
         <p className="text-neutral-900 font-semibold text-base md:text-lg">Вадим Леонидович Ветчанин</p>
-        <p className="text-neutral-500 text-sm mt-1">Психолог · Мастер йоги · 30 лет практики · Основатель кафедры духовной навигации МИЙ</p>
+        <p className="text-neutral-500 text-sm mt-1">Психолог · Мастер йоги · 40 лет практики · Основатель кафедры духовной навигации МИЙ</p>
       </div>
     </div>
   );
