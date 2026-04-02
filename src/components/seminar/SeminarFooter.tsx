@@ -43,7 +43,17 @@ export default function SeminarFooter() {
               <h1 className="text-[9vw] sm:text-[8vw] lg:text-[7vw] leading-[0.85] mt-4 sm:mt-6 lg:mt-8 text-white font-bold tracking-tight">
                 СЕМИНАР
               </h1>
-              <p className="text-neutral-400 text-sm sm:text-base">{new Date().getFullYear()} · Вадим Ветчанин</p>
+              <div className="text-right flex flex-col items-end gap-1">
+                <a
+                  href="https://quantum-connectivity-enhancer--preview.poehali.dev"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white/50 text-xs uppercase tracking-widest hover:text-amber-400 transition-colors duration-300 border-b border-white/20 hover:border-amber-400 pb-0.5"
+                >
+                  Сайт Вадима Ветчанина →
+                </a>
+                <p className="text-neutral-500 text-xs">{new Date().getFullYear()} · Вадим Ветчанин</p>
+              </div>
             </div>
           </div>
         </div>
