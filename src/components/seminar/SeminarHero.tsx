@@ -16,10 +16,9 @@ export default function SeminarHero() {
     >
       <motion.div style={{ y }} className="absolute inset-0 w-full h-full">
         <img
-          src="/images/mountain-landscape.jpg"
-          alt="Горный пейзаж"
+          src="https://cdn.poehali.dev/projects/202f64b7-f2b6-44c8-becf-e298ec3e73f0/files/60b92a6d-5aa3-4f4f-bea3-892d5ef047d0.jpg"
+          alt="Йога и символ Ом"
           className="w-full h-full object-cover"
-          style={{ filter: "hue-rotate(200deg) saturate(0.7) brightness(0.85)" }}
         />
       </motion.div>
 
