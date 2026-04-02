@@ -34,7 +34,7 @@ export default function SeminarHero() {
           через практики Хатха и Раджа-йоги с Вадимом Ветчаниным
         </p>
         <a
-          href="#contact-seminar"
+          href="tel:+79226135972"
           className="inline-block bg-white text-neutral-900 px-8 py-3 uppercase tracking-wide text-sm font-semibold hover:bg-neutral-200 transition-colors duration-300"
         >
           Записаться на семинар
