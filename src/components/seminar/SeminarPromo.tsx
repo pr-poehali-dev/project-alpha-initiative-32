@@ -18,8 +18,8 @@ export default function SeminarPromo() {
       <div className="fixed top-[-10vh] left-0 h-[120vh] w-full">
         <motion.div style={{ y }} className="relative w-full h-full">
           <img
-            src="/images/woman-horse.jpg"
-            alt="Природа и практика"
+            src="https://cdn.poehali.dev/projects/202f64b7-f2b6-44c8-becf-e298ec3e73f0/files/f4462321-b0e0-4397-863a-0eb357395f14.jpg"
+            alt="Практика йоги на природе"
             className="w-full h-full object-cover"
           />
         </motion.div>
