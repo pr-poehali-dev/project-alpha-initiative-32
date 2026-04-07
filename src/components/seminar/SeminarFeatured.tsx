@@ -1,6 +1,5 @@
 export default function SeminarFeatured() {
   const program = [
-    "Соединение с единомышленниками для взаимной поддержки",
     "Законы мыслей, чувств, действий и трансформации энергий",
     "Самодиагностика и гармонизация физического, эмоционального и ментального планов",
     "Причинно-следственные связи влияния энергий на жизнь",
@@ -24,7 +23,7 @@ export default function SeminarFeatured() {
       <div className="flex-1 text-left lg:h-[800px] flex flex-col justify-center lg:mr-12 lg:order-1">
         <h3 className="uppercase mb-4 text-sm tracking-wide text-neutral-500">Программа семинара</h3>
         <p className="text-2xl lg:text-4xl mb-8 text-neutral-900 leading-tight font-bold">
-          10 глубоких тем<br />для трансформации
+          9 глубоких тем<br />для трансформации
         </p>
         <ul className="space-y-3 mb-10">
           {program.map((item, i) => (
