@@ -8,7 +8,9 @@ export default function Header({ className }: HeaderProps) {
   return (
     <header className={`absolute top-0 left-0 right-0 z-10 p-6 ${className ?? ""}`}>
       <div className="flex justify-between items-center">
-        <div className="text-white text-sm uppercase tracking-wide">Ритрит · 24–26 апреля</div>
+        <Link to="/" className="text-white text-sm uppercase tracking-wide hover:text-neutral-300 transition-colors">
+          ← Школа
+        </Link>
         <nav className="flex gap-8">
           <a
             href="#program"

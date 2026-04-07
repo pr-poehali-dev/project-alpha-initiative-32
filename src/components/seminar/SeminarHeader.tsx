@@ -9,7 +9,7 @@ export default function SeminarHeader({ className }: SeminarHeaderProps) {
     <header className={`absolute top-0 left-0 right-0 z-10 p-6 ${className ?? ""}`}>
       <div className="flex justify-between items-center">
         <Link to="/" className="text-white text-sm uppercase tracking-wide hover:text-neutral-300 transition-colors">
-          ← Ритрит
+          ← Школа
         </Link>
         <nav className="flex gap-8">
           <a
