@@ -43,9 +43,6 @@ export default function Home() {
               className="flex-1 bg-white text-neutral-900 px-8 py-4 uppercase tracking-wide text-sm font-semibold hover:bg-amber-400 transition-colors duration-300 text-center"
             >
               Ритрит
-              <span className="block text-xs font-normal mt-0.5 opacity-60 normal-case tracking-normal">
-                24–26 апреля · Томск
-              </span>
             </Link>
             <Link
               to="/seminar"
