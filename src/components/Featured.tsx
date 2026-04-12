@@ -15,7 +15,7 @@ export default function Featured() {
     <div id="program" className="flex flex-col lg:flex-row lg:justify-between lg:items-center min-h-screen px-6 py-16 lg:py-0 bg-white">
       <div className="flex-1 h-[400px] lg:h-[800px] mb-8 lg:mb-0 lg:order-2">
         <img
-          src="https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?w=1200&q=80"
+          src="https://cdn.poehali.dev/projects/202f64b7-f2b6-44c8-becf-e298ec3e73f0/files/33180ff8-def4-4d49-a181-1b12859d264b.jpg"
           alt="Практика йоги на природе"
           className="w-full h-full object-cover"
         />
