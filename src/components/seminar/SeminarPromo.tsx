@@ -34,7 +34,7 @@ export default function SeminarPromo() {
         <p className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-3xl mb-6 leading-tight">
           3 или 6 месяцев практики — выберите свой путь к здоровью и гармонии
         </p>
-        <p className="text-white/80 text-sm uppercase tracking-widest">12 групповых + 6 индивидуальных занятий · 75 учебных часов</p>
+        <p className="text-white/80 text-sm uppercase tracking-widest">12 групповых + 6 индивидуальных занятий · 70 учебных часов</p>
       </div>
     </div>
   );
