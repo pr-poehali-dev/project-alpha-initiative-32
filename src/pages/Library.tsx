@@ -232,17 +232,42 @@ const books = [
   { id: 227, authors: "Читтапад", title: "Осознание в йоге. Энергетические связи людей", publisher: "Харьков", year: 1998, pages: 28 },
 ];
 
+const FILTERS = [
+  { label: "Все", key: "all" },
+  { label: "Ар Сантэм", key: "Ар Сантэм" },
+  { label: "Читтапад", key: "Читтапад" },
+  { label: "Сафронов А.Г.", key: "Сафронов" },
+  { label: "Свами Матхара", key: "Свами Матхара" },
+  { label: "Другие", key: "other" },
+];
+
+const dailyBook = books[new Date().getDate() % books.length];
+
 export default function Library() {
   const [search, setSearch] = useState("");
+  const [activeFilter, setActiveFilter] = useState("all");
+  const [showDaily, setShowDaily] = useState(true);
 
   const filtered = books.filter((b) => {
     const q = search.toLowerCase();
-    return (
+    const matchesSearch =
       b.title.toLowerCase().includes(q) ||
       b.authors.toLowerCase().includes(q) ||
-      String(b.year ?? "").includes(q)
-    );
+      String(b.year ?? "").includes(q);
+
+    const matchesFilter =
+      activeFilter === "all"
+        ? true
+        : activeFilter === "other"
+        ? !["Ар Сантэм", "Читтапад", "Сафронов", "Свами Матхара"].some((k) =>
+            b.authors.includes(k)
+          )
+        : b.authors.includes(activeFilter);
+
+    return matchesSearch && matchesFilter;
   });
+
+  const totalPages = books.reduce((s, b) => s + (b.pages ?? 0), 0);
 
   return (
     <main className="min-h-screen bg-neutral-50">
@@ -269,14 +294,73 @@ export default function Library() {
       </div>
 
       <div className="max-w-5xl mx-auto px-6 py-12">
-        <div className="mb-10">
+        <div className="mb-8">
           <p className="text-xs uppercase tracking-[0.3em] text-neutral-400 mb-2">Духовная навигация</p>
           <h1 className="text-3xl md:text-4xl font-bold text-neutral-900 leading-tight">
             Учебная литература
           </h1>
-          <p className="text-neutral-500 mt-3 text-sm md:text-base">
-            Библиотека школы йоги и психологии — {books.length} изданий
-          </p>
+
+          <div className="flex gap-6 mt-5 flex-wrap">
+            <div className="text-center">
+              <p className="text-2xl font-bold text-neutral-900">{books.length}</p>
+              <p className="text-xs text-neutral-400 mt-0.5">изданий</p>
+            </div>
+            <div className="text-center">
+              <p className="text-2xl font-bold text-neutral-900">{totalPages.toLocaleString()}</p>
+              <p className="text-xs text-neutral-400 mt-0.5">страниц</p>
+            </div>
+            <div className="text-center">
+              <p className="text-2xl font-bold text-neutral-900">
+                {books.filter(b => b.authors.includes("Ар Сантэм")).length}
+              </p>
+              <p className="text-xs text-neutral-400 mt-0.5">трудов Ар Сантэм</p>
+            </div>
+          </div>
+        </div>
+
+        {showDaily && (
+          <div className="mb-8 bg-amber-50 border border-amber-200 p-5 relative">
+            <button
+              onClick={() => setShowDaily(false)}
+              className="absolute top-3 right-3 text-amber-400 hover:text-amber-600 transition-colors"
+            >
+              <Icon name="X" size={14} />
+            </button>
+            <p className="text-xs uppercase tracking-widest text-amber-600 mb-2 flex items-center gap-1.5">
+              <Icon name="Sparkles" size={12} /> Книга дня
+            </p>
+            <p className="text-neutral-900 font-medium text-sm leading-snug">{dailyBook.title}</p>
+            {dailyBook.authors && (
+              <p className="text-neutral-500 text-xs mt-1">{dailyBook.authors}</p>
+            )}
+            <p className="text-neutral-400 text-xs mt-1">
+              {[dailyBook.publisher, dailyBook.year, dailyBook.pages ? `${dailyBook.pages} с.` : null]
+                .filter(Boolean).join(" · ")}
+            </p>
+          </div>
+        )}
+
+        <div className="flex gap-2 flex-wrap mb-8">
+          {FILTERS.map((f) => (
+            <button
+              key={f.key}
+              onClick={() => setActiveFilter(f.key)}
+              className={`px-3 py-1.5 text-xs uppercase tracking-wide border transition-colors ${
+                activeFilter === f.key
+                  ? "bg-neutral-900 text-white border-neutral-900"
+                  : "bg-white text-neutral-500 border-neutral-200 hover:border-neutral-400"
+              }`}
+            >
+              {f.label}
+              {f.key !== "all" && (
+                <span className="ml-1.5 opacity-50">
+                  {f.key === "other"
+                    ? books.filter(b => !["Ар Сантэм", "Читтапад", "Сафронов", "Свами Матхара"].some(k => b.authors.includes(k))).length
+                    : books.filter(b => b.authors.includes(f.key)).length}
+                </span>
+              )}
+            </button>
+          ))}
         </div>
 
         <div className="divide-y divide-neutral-100">
