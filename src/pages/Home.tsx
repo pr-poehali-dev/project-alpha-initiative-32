@@ -54,6 +54,12 @@ export default function Home() {
               </span>
             </Link>
           </div>
+          <Link
+            to="/library"
+            className="mt-4 text-white/40 text-xs uppercase tracking-widest hover:text-white/70 transition-colors"
+          >
+            Учебная литература →
+          </Link>
         </div>
 
         <div className="absolute bottom-6 left-0 right-0 z-10 text-center">
