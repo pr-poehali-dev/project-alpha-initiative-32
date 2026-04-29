@@ -25,52 +25,54 @@ export default function Home() {
         </motion.div>
         <div className="absolute inset-0 bg-black/55 z-[1]" />
 
-        <div className="relative z-10 text-center text-white px-6 flex flex-col items-center">
-          <p className="text-xs md:text-sm uppercase tracking-[0.3em] mb-6 opacity-60">
+        <div className="relative z-10 text-center text-white px-6 flex flex-col items-center w-full max-w-2xl mx-auto">
+          <a
+            href="https://quantum-connectivity-enhancer--preview.poehali.dev"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xs uppercase tracking-[0.3em] mb-2 opacity-50 hover:opacity-90 transition-opacity border-b border-white/20 pb-0.5"
+          >
+            vetсhanin.ru
+          </a>
+          <p className="text-sm md:text-base uppercase tracking-[0.25em] mb-6 opacity-70 font-light">
             Вадим Ветчанин
           </p>
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4 leading-tight max-w-3xl mx-auto">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4 leading-tight">
             Школа йоги<br />и психологии
           </h1>
-          <p className="text-base md:text-lg max-w-xl mx-auto opacity-75 mb-14 leading-relaxed">
-            Практики гармонии тела, ума и энергий.<br />
-            Выберите формат участия:
+          <p className="text-sm md:text-base max-w-sm mx-auto opacity-60 mb-12 leading-relaxed font-light tracking-wide">
+            «Духовная навигация»
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 w-full max-w-md">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 w-full">
             <Link
               to="/retreat"
-              className="flex-1 bg-white text-neutral-900 px-8 py-4 uppercase tracking-wide text-sm font-semibold hover:bg-amber-400 transition-colors duration-300 text-center"
+              className="bg-white/10 border border-white/30 text-white px-6 py-5 uppercase tracking-wide text-sm font-semibold hover:bg-white hover:text-neutral-900 transition-all duration-300 text-center backdrop-blur-sm"
             >
+              <span className="block text-lg mb-1">🏕</span>
               Ритрит
             </Link>
             <Link
               to="/seminar"
-              className="flex-1 border border-white/60 text-white px-8 py-4 uppercase tracking-wide text-sm font-semibold hover:bg-white hover:text-neutral-900 transition-colors duration-300 text-center"
+              className="bg-white/10 border border-white/30 text-white px-6 py-5 uppercase tracking-wide text-sm font-semibold hover:bg-white hover:text-neutral-900 transition-all duration-300 text-center backdrop-blur-sm"
             >
+              <span className="block text-lg mb-1">📚</span>
               Семинар
               <span className="block text-xs font-normal mt-0.5 opacity-60 normal-case tracking-normal">
                 3 или 6 месяцев
               </span>
             </Link>
+            <Link
+              to="/library"
+              className="bg-white/10 border border-white/30 text-white px-6 py-5 uppercase tracking-wide text-sm font-semibold hover:bg-white hover:text-neutral-900 transition-all duration-300 text-center backdrop-blur-sm"
+            >
+              <span className="block text-lg mb-1">📖</span>
+              Литература
+              <span className="block text-xs font-normal mt-0.5 opacity-60 normal-case tracking-normal">
+                227 изданий
+              </span>
+            </Link>
           </div>
-          <Link
-            to="/library"
-            className="mt-4 text-white/40 text-xs uppercase tracking-widest hover:text-white/70 transition-colors"
-          >
-            Учебная литература →
-          </Link>
-        </div>
-
-        <div className="absolute bottom-6 left-0 right-0 z-10 text-center">
-          <a
-            href="https://quantum-connectivity-enhancer--preview.poehali.dev"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-white/40 text-xs uppercase tracking-widest hover:text-white/70 transition-colors"
-          >
-            vetсhanin.ru →
-          </a>
         </div>
       </div>
     </main>

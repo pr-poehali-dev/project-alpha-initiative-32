@@ -290,7 +290,15 @@ export default function Library() {
             />
           </div>
         </div>
-        <span className="text-neutral-400 text-xs shrink-0">{filtered.length} из {books.length}</span>
+        <span className="text-neutral-400 text-xs shrink-0 hidden sm:block">{filtered.length} из {books.length}</span>
+        <a
+          href="https://quantum-connectivity-enhancer--preview.poehali.dev"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-neutral-400 text-xs uppercase tracking-widest hover:text-neutral-700 transition-colors shrink-0 hidden md:block"
+        >
+          vetсhanin.ru →
+        </a>
       </div>
 
       <div className="max-w-5xl mx-auto px-6 py-12">
