@@ -303,7 +303,7 @@ export default function Library() {
 
       <div className="max-w-5xl mx-auto px-6 py-12">
         <div className="mb-8">
-          <p className="text-xs uppercase tracking-[0.3em] text-neutral-400 mb-2">Духовная навигация</p>
+          <p className="text-xs uppercase tracking-[0.3em] text-neutral-400 mb-2">САТТЭМ</p>
           <h1 className="text-3xl md:text-4xl font-bold text-neutral-900 leading-tight">
             Учебная литература
           </h1>

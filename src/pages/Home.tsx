@@ -40,7 +40,7 @@ export default function Home() {
             Вадим Ветчанин
           </p>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-4 leading-tight">
-            Духовная<br />навигация
+            САТТЭМ
           </h1>
           <p className="text-sm md:text-base opacity-50 mb-14 font-light tracking-widest uppercase">
             Школа йоги и психологии
@@ -88,7 +88,7 @@ export default function Home() {
             </h2>
             <div className="space-y-5 text-white/60 text-sm md:text-base leading-relaxed font-light">
               <p>
-                Школа йоги и психологии «Духовная навигация» — это пространство, где древние знания встречаются с современным пониманием природы человека.
+                Школа йоги и психологии «САТТЭМ» — это пространство, где древние знания встречаются с современным пониманием природы человека.
               </p>
               <p>
                 Здесь не ищут быстрых результатов. Здесь учатся слушать себя, двигаться в согласии с внутренними законами и постепенно обретать устойчивость — ту, что не зависит от внешних обстоятельств.
